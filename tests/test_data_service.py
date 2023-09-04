@@ -51,7 +51,7 @@ def test_data_aggregation(mock_connect):
 
     # Encode string to bytes and create a BytesIO object
     buffer = BytesIO(csv_data.encode())
-    df = pd.read_csv(buffer, sep=";")  # Передайте объект BytesIO в pd.read_csv
+    df = pd.read_csv(buffer, sep=";")
 
     # Checking aggregated values
     aggregated_value_2022 = df[df['code'] == "1.2.3"]['value'].iloc[0]
